@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exo 1 : Sémantique HTML5</title>
+    </head>
+    <body>
+        
+        <!-- Ouverture -->
+        <header>
+            <h1>Julien Noyer <span>Artisan Digital</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="">A propos</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contacts</a></li>
+                    <li><a href="https://www.linkedin.com/in/julien-n-21219b28/" target="_blank">Linkedin</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenu principal -->
+        <main>
+            <section>
+                <h2>A propos</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident dolor ea odit earum pariatur, distinctio nobis iste dolores mollitia id, dignissimos quae non error debitis ad rem maiores assumenda harum.</p>
+            </section>
+
+            <section>
+                <h2>Portfolio</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut illum minima quo ullam cupiditate nisi earum sed hic, quaerat est ipsum perspiciatis explicabo laudantium exercitationem voluptas corrupti vitae, ratione tempora?</p>
+
+                <article>
+                    <img src="./img/1.jpg" alt="Image d'un robot">
+                </article>
+
+                <article>
+                    <img src="./img/2.jpg" alt="Image de mains">
+                </article>
+
+                <article>
+                    <img src="./img/3.jpg" alt="Image de punaises">
+                </article>
+
+                <article>
+                    <img src="./img/4.jpg" alt="Image d'un robot">
+                </article>
+            </section>
+
+            <section>
+                <h2>Contacts</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, quis ad tempora, aut ab cumque recusandae molestias cupiditate sed sint saepe et quae. Accusantium ad possimus optio laudantium recusandae sequi!</p>
+
+                <form action="constatc.php">
+                    <label>Votre nom</label>
+                    <input type="text" name="userName" placeholder="Min. 2 caractères" minlength="2" required>
+
+                    <label>Votre email</label>
+                    <input type="email" name="userEmail" placeholder="Un email valide" minlength="5" required>
+
+                    <label>Votre message</label>
+                    <textarea name="userMessage"></textarea>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Fermeture -->
+        <footer>
+            <p>Under WTFPL licence 2019 Julien Noyer</p>
+        </footer>
+    </body>
+</html>
