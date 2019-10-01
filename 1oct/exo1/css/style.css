@@ -1,0 +1,49 @@
+/* 
+Reset
+*/
+    /* Sélectionner toutes les balises (tag) HTML */
+    *{
+        /* Supprimer toutes les marge (ext./int.) */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer border et padding dans la taille des balises */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        /* Passer d'une base 16 à unee base 10 */
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.6rem;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    a{
+        color: inherit;
+    }
+
+    /* Toutes les balises A sauf celles ayant [target="_blank"] */
+    a:not([target="_blank"]){
+        text-decoration: none;
+    }
+/**/
+
+/* 
+Header
+*/
+    nav li{
+        display: inline-block;
+    }
+
+    nav li:not(:first-of-type){
+        margin-left: 1rem;
+    }
+/**/
