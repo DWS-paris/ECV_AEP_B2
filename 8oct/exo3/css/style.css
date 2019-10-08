@@ -1,0 +1,55 @@
+/* 
+Gestion de la NAV
+*/
+    nav li{
+        display: inline-block;
+    }
+
+    nav ul{
+        text-align: right;
+    }
+/**/
+
+/* 
+Gestion du MAIN
+*/
+    main{
+        /* Propriété CSS3 */
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+    main section{
+        width: 70%;
+    }
+
+    main aside{
+        width: 9%;
+    }
+/**/
+
+/* 
+Gestion des liens du footer
+*/
+    footer ul{
+        list-style: none;
+
+        /* Propriété CSS3 */
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        -moz-justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+        -ms-justify-content: flex-end;
+        justify-content: flex-end;
+    }
+/**/

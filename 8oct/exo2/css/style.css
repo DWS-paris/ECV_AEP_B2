@@ -1,0 +1,67 @@
+/* 
+- La liste fait 500px de large
+- La liste est centrée dans la page
+- Supprimer la marge intérieur de la liste
+- Ajouter une marge extérieur en bas de la liste de 100px
+- Les liens sont sur une ligne
+*/
+ul{
+    width: 500px;
+    margin: 0 auto 100px auto;
+    padding: 0;
+
+    /* Bloquer les enfants dans le parents */
+    position: relative;
+}
+
+li{
+    display: inline-block;
+}
+
+a{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* 
+1er UL
+Tous les liens à gauche sauf le dernier à droite
+*/
+ul:first-of-type li:last-of-type{
+    position: absolute;
+    right: 0;
+}
+/**/
+
+/* 
+2ème UL
+Tous les liens à droite sauf le premier à gauche
+*/
+    ul:nth-of-type(2){
+        text-align: right;
+    }
+
+    ul:nth-of-type(2) li:first-child{
+        position: absolute;
+        left: 0;
+    }
+/**/
+
+/* 
+3ème UL
+Tous les liens au centre sauf le premier à droite et le dernier à gauche
+*/
+    ul:last-of-type{
+        text-align: center;
+    }
+
+    ul:last-of-type li:first-child{
+        position: absolute;
+        right: 0;
+    }
+
+    ul:last-of-type li:last-child{
+        position: absolute;
+        left: 0;
+    }
+/**/
