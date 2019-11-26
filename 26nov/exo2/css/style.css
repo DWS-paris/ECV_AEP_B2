@@ -1,0 +1,36 @@
+/* 
+Reset
+*/
+    /* Sélectionner toutes les balises */
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les BORDER et les PADDING dans la taille des balises */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Passer d'une base 16 à une base 10 */
+    html{
+        font-size: 62.5%; /* => 1rem = 10px */
+    }
+
+    body, h1 span{
+        font-size: 1.6rem;
+        line-height: 1.1;
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* Les images de doivent pas dépasser leur parent */
+    img{
+        max-width: 100%;
+    }
+/**/
