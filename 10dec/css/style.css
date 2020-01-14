@@ -1,0 +1,262 @@
+/* 
+Reset
+*/
+    /* Création de variables */
+    :root{
+        --main-color: #bf1a07;
+        --grey-color: #e6e6e6;
+        --min-marge: 1rem;
+        --med-marge: 2rem;
+        --max-marge: 4rem;
+    }
+
+    /* Sélectionner toutes les balises */
+    *{
+        /* Supprimer toutes les marges */
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les BORDER et les PADDING dans la taille des balises */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Passer d'une base 16 à une base 10 */
+    html{
+        font-size: 62.5%; /* => 1rem = 10px */
+    }
+
+    body{
+        font-family: sans-serif;
+        font-size: 1.6rem;
+        font-weight: 100;
+        line-height: 1.1;
+        color: var(--main-color);
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /* Les images de doivent pas dépasser leur parent */
+    img{
+        max-width: 100%;
+    }
+
+    li{
+        list-style: none;
+    }
+/**/
+
+
+/* 
+Header
+*/
+    header, footer{
+        color: white;
+        background-color: var(--main-color);
+    }
+
+    header{
+        padding: var(--med-marge) var(--max-marge);
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+    }
+
+    h2, h3, footer{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: .8;
+        padding: var(--med-marge);
+        margin-bottom: var(--min-marge);
+        background-color: var(--main-color);
+        text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, .5);
+        box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+    }
+
+    h1 + p {
+        border-bottom: .1rem dotted white;
+    }
+/**/
+
+/* 
+Main
+*/
+    main{
+        padding: var(--med-marge);
+    }
+
+    h2{
+        margin-bottom: var(--med-marge);
+    }
+
+    section:first-child li{
+        padding-bottom: var(--med-marge);
+        border-bottom: .1rem dotted var(--main-color);
+        margin-bottom: var(--med-marge);
+    }
+
+    li i{
+        opacity: .7;
+    }
+
+    h3{
+        font-size: 2rem;
+        margin-bottom: var(--min-marge);
+    }
+/**/
+
+/* 
+Form
+*/
+    form li{
+        margin-bottom: var(--med-marge);
+    }
+
+    fieldset {
+        border: none;
+        margin-bottom: var(--med-marge);
+    }
+
+    legend{
+        color: black;
+    }
+
+    legend, label{
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: var(--min-marge);
+    }
+
+    label, input:not([type="checkbox"]), select, textarea, button[type="submit"]{
+        font-size: 1.5rem;
+        display: block;
+        width: 100%;
+    }
+
+    input, select{
+        padding: var(--min-marge);
+    }
+
+    select {
+        border: 0;
+        background: white;
+        border: .1rem solid var(--grey-color);
+        border-radius: 0;
+        background-image: url(../img/cursorSelect.png);
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: .2rem;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    textarea {
+        border: none;
+        max-height: 8rem;
+        height: 8rem;
+        max-width: 100%;
+        background-color: var(--grey-color);
+        padding: 1rem;
+        margin-bottom: var(--med-marge);
+    }
+
+    button[type="submit"] {
+        background: var(--main-color);
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 1rem;
+        margin-bottom: var(--max-marge);
+    }
+/**/
+
+/* 
+Product list
+*/
+    #productList{
+        color: black;
+        margin-bottom: var(--max-marge);
+    }
+
+    #productList img {
+        width: 3rem;
+        float: left;
+        margin-right: 1rem;
+    }
+
+    #productList li {
+        clear: both;
+        border-bottom: .1rem dotted var(--main-color);
+        padding-bottom: 1rem;
+        margin: 1.5rem auto;
+    }
+
+
+    #productList p:last-child {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: var(--main-color);
+        font-weight: 400;
+        padding-top: .3rem;
+    }
+/**/
+
+/* 
+Footer
+*/
+    footer{
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: var(--med-marge);
+    }
+/**/
+
+/* 
+Requête media
+*/
+    @media screen and (min-width: 950px){
+        main, header{
+            max-width: 95rem;
+            margin: auto;
+        }
+
+
+        main, form ul{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main section, form li{
+            width: 48%;
+        }
+
+        main section:first-child{
+            order: 2;
+        }
+
+        main section:last-child{
+            order: 1;
+        }
+
+        #productOption{
+            display: initial;
+        }
+
+        #productOption li{
+            width: 100%;
+        }
+    }

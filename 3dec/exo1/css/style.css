@@ -1,0 +1,16 @@
+li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    padding: .5rem;
+    transition: all .3s;
+}
+
+.active{
+    color: white;
+    background-color: black;
+}

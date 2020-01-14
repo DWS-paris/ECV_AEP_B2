@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ma liste de course : Système de gestion pour acheter mieux</title>
+        <!-- Le CSS s'intègre dans la balise HEAD -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Ma liste de course</h1>
+            <p>Système de gestion pour acheter mieux.</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Ma liste de courses</h2>
+                <ul id="productList"></ul>
+            </section>
+
+            <section>
+                <h3>Ajouter un produit</h3>
+                <form action="#">
+                    <fieldset>
+                        <legend>Type de produit</legend>
+                        <ul>
+                            <li>
+                                <label for="productType">Catégorie</label>
+                                <select id="productType" name="productType">
+                                    <option value="null" selected>Sélectionner</option>
+                                    <option value="legume">Légume</option>
+                                    <option value="fruit">Fruit</option>
+                                    <option value="viande">Viande</option>
+                                    <option value="poisson">Poisson</option>
+                                    <option value="divers">Divers</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="productName">Nom</label>
+                                <input type="text" id="productName" name="productName" placeholder="Obligatoire">
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>A propos</legend>
+                        <ul>
+                            <li>
+                                <label for="productComment">Commentaire</label>
+                                <textarea id="productComment" placeholder="quantité, format..."></textarea>
+                            </li>
+                            <li>
+                                <label for="productOption">Option</label>
+                                <ul id="productOption">
+                                    <li><input type="checkbox" id="cboxPetitDej" value="petitDej"> Petit déjeuné</li>
+                                    <li><input type="checkbox" id="cboxDejeune" value="dejeune"> Déjeuné</li>
+                                    <li><input type="checkbox" id="cboxDiner" value="diner"> Diner</li>
+                                    <li><input type="checkbox" id="cboxReserve" value="reserve"> Reserve</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </fieldset>
+    
+                    <button type="submit">Ajouter</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Under WTFPL - 2019 Julien Noyer</p>
+        </footer>
+        
+        <!-- Intégrer le Javascript juste avant la fin du BODY -->
+        <script src="./js/script.js"></script>
+    </body>
+</html>
